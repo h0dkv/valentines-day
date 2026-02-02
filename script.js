@@ -6,7 +6,7 @@ const question = document.getElementById("question");
 const heartsContainer = document.getElementById("hearts");
 
 // Names (customized)
-const names = "Lini & Bebinka 💖";
+const names = "Lini, my Bebinka 💖";
 
 // Set personalized question
 question.textContent = `${names}, will you be my Valentine?`;
