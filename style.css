@@ -1,107 +1,106 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow: hidden;
 }
 
 .card {
-    background: white;
-    padding: 2.5rem 3rem;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    max-width: 90vw;
-    position: relative;
+  background: white;
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem 1.5rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  text-align: center;
+  position: relative;
 }
-
 
 h1 {
-    margin: 0 0 1.5rem;
-    font-size: 2.2rem;
-    color: #ff4d6d;
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  color: #ff4d6d;
 }
-
 
 .buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
 
 button {
-    border: none;
-    padding: 0.8rem 1.6rem;
-    font-size: 1.1rem;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.05rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  touch-action: manipulation;
 }
-
 
 button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
-
 
 #yes {
-    background: #ff4d6d;
-    color: white;
-    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4);
+  background: #ff4d6d;
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4);
 }
-
 
 #no {
-    background: #ffe3e8;
-    color: #ff4d6d;
-    position: relative;
+  background: #ffe3e8;
+  color: #ff4d6d;
 }
-
 
 .hearts {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
-
 
 .heart {
-    position: absolute;
-    bottom: -20px;
-    font-size: 1.5rem;
-    animation: floatUp 4s linear forwards;
-    opacity: 0.8;
+  position: absolute;
+  bottom: -20px;
+  font-size: 1.5rem;
+  animation: floatUp linear forwards;
 }
-
 
 @keyframes floatUp {
-    from {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(-110vh) scale(1.5);
-        opacity: 0;
-    }
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
 }
-
 
 .yes-message {
-    font-size: 1.6rem;
-    color: #ff4d6d;
-    animation: pop 0.4s ease;
+  font-size: 1.6rem;
+  color: #ff4d6d;
+  animation: pop 0.4s ease;
 }
 
-
 @keyframes pop {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
